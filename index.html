@@ -8,11 +8,29 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
-
-    <div></div>
-
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center text-white animated tada delay-5s"><img src="https://giphy.com/static/img/icons/apple-touch-icon-120px.png" alt="giphyIcon">GIFtastic</h1>
+            <p class="lead text-white text-center animated zoomIn">Below is a list of reactions. Each button reveals a series of GIFs. Click GIF images to animate!</p>
+            <hr class="my-4">
+            <p class="text-white question">Have a different topic or reaction in mind?</p>
+            <form id="reaction_form" class="text-center">
+                    <label for="reaction_input" class="text-white">Create Your Own Reaction or Topic button!</label>
+                    <input type="text" id="reaction_input" placeholder="What's on your mind?">
+                    <input class="btn btn-success btn-lg" id="add_reaction" type="submit" value="Add it!">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr class="my-4">
+        <div class="d-flex justify-content-start text-white"><p class="font-weight-bold titleCategory">Reactions and Topics: </p></div>
+        <div id="buttons_here" class="animated fadeIn slower delay-5s"></div>
+        <hr class="my-4">
+        <div id="reactions_view" class="d-flex align-content-start flex-wrap justify-content-center text-white"></div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
